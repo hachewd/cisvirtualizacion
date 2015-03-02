@@ -1,0 +1,346 @@
+/**
+	Diseño y desarrollo Hachewd.
+	CSS creado por Hanzel Mata R - enero 2015
+
+**/
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700|Open+Sans:400,300,700);
+
+body{
+	background: #9adfff url('../images/fond.jpg') repeat-x top left;
+	color:#3f5875;
+	font-family: 'Quicksand', sans-serif;
+	font-size:16px;
+}
+
+.pages h1{
+	font-family: 1em;
+}
+.content{
+	width: 70%;
+	margin: 0 auto;
+}
+.pages figure img{
+	width: 100%;
+}
+.configserver{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.copy{
+	position: relative;
+}
+.rw-sentence{
+	display:inline-block;
+	text-align:right;
+}
+.avance{
+	margin: 0 auto;
+	width: 300px;
+}
+header.top{
+	background: #fff;
+	overflow: hidden;
+}
+header.top figure, header.top aside{
+	display: inline-block;
+	vertical-align: middle;
+}
+header.top aside{
+	color: #707274;
+	font-size: 1.2em;
+	float: right;
+	margin-top: 30px;
+	padding-bottom: 15px;
+	
+}
+header.top aside strong{
+	font-size: 1.4em;
+	font-style: italic;
+}
+.step{
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 2px;
+	height: 13px;
+	position: relative;
+	width:calc(90% / 5);
+}
+.pendiente{
+	background: #bdd0dc;
+}
+.terminado{
+	background: #89969f;
+	opacity: 0;
+}
+.avance div.step:hover .caption{
+	display: block;
+}
+.caption{
+	color: #fff;
+	background: #f64;
+	border-radius: 10px;
+	display: none;
+	font-weight: normal;
+	font-size: 0.9em;
+	padding: 10px;
+	position: absolute;
+	text-align:center;
+	top: 20px;
+	width: 100px;
+	z-index: 12;
+}
+.pasos{
+	position: relative;
+	height: 90px;
+	width: 100%;
+}
+.paso1, .paso2, .paso3, .paso4, .paso5{
+	position: absolute;
+	visibility: hidden;
+	width: 100%;
+}
+.selector{
+	height: 50px;
+}
+.selector ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 98%;
+	position: absolute;
+	z-index: 11;
+}
+.selector li{
+	display:block;
+	background: #fff;
+	border: #b5d3e6 2px solid;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.1em;
+	padding: 10px 10px 10px 20px;
+	position: relative;
+}
+.option-box{
+	opacity: 0;
+}
+.select-box{
+	font-weight: bold;
+}
+.selector li div{
+	float:right;
+}
+.selector li li{
+	border:0;
+	border-radius: 0;
+	padding: 8px 10px;
+	background: #fff;
+	width: 100%;
+}
+.selector li li:hover{
+	background: #e0f3ff;
+}
+.selector li ul{
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position: relative;
+}
+#contador{
+	text-align: right;
+	padding: 0 1%;
+}
+.activo{
+	opacity: 1;
+	visibility: visible;
+	z-index: 10;
+}
+.inactivo{
+	opacity: 0;
+	visibility: hidden;
+	z-index: 15;
+}
+header.top figure{
+	width: 250px;
+}
+figure.tablet, .texto{
+	display: inline-block;
+	vertical-align: top;
+}
+figure.tablet{
+	margin-top: -30px;
+}
+.texto{
+	margin-top: 20px;
+}
+footer{
+	background: #fff;
+	overflow: hidden;
+	padding: 10px 0;
+	width: 100%;
+}
+.social{
+	float: left;
+}
+.logos{
+	margin-top: 10px;
+	float: right;
+}
+select, input{
+	width: 70%;
+	padding: 5px 10px;
+}
+@media (min-width: 280px) and (max-width:768px){
+	.pages{
+		margin: 0 auto;
+		width: 90%;
+	}
+	.pages figure{
+		margin: 0 auto;
+		width: 80%;
+	}
+	.copy{
+		margin: 10% auto 0 auto;
+		text-align: right;
+		width:100%;
+	}
+	header.top figure{
+		display: block;
+		margin: 0 auto;
+		width: 70%;
+	}
+	header.top figure img{
+		width: 100%;
+	}
+	header.top aside{
+		margin: 0 auto 0 auto; 
+		text-align: center;
+		width: 100%;
+	}
+	figure.tablet{
+		display: none;
+		margin: 0 auto;
+		width: 90%;
+	}
+	figure.tablet img{
+		width: 100%;
+	}
+	.content{
+		width: 95%;
+		margin: 0 auto;
+	}
+	.texto{
+		display: none;
+	}
+	.pages h1{
+		margin: 25px auto;
+		width:50%;
+	}
+	.pages h1 img{
+		width: 100%;
+	}
+ }
+@media (min-width: 769px) and (max-width:992px){
+	.pages{
+		margin: 0 auto;
+		width: 80%;
+	}
+	.pages figure{
+		margin: 0 auto;
+		width: 60%;
+	}
+	.copy{
+		margin: 20% auto 0 auto;
+		text-align: right;
+		width:98%;
+	}
+	.content{
+		width: 95%;
+		margin: 0 auto;
+	}
+	figure.tablet{
+		margin:-20px auto 0 auto;
+		width: 60%;
+	}
+	figure.tablet img{
+		width: 100%;
+	}
+	.pages h1{
+		margin: 20px auto;
+		width:50%;
+	}
+	.pages h1 img{
+		width:100%;
+	}
+	
+ }
+ @media (min-width: 993px) and (max-width: 1024px){
+	.pages{
+		margin: 0 auto;
+		padding-top: 5%;
+		width: 600px;
+	}
+	.pages figure{
+		margin: 0 auto;
+		width: 52%;
+	}
+	.copy{
+		margin: 2% auto 0 auto;
+		text-align: right;
+		width:80%;
+	}
+	.content{
+		width: 95%;
+		margin: 0 auto;
+	}
+	figure.tablet{
+		margin: 0 auto;
+		width: 60%;
+	}
+	figure.tablet img{
+		width: 100%;
+	}
+
+ }
+ @media (min-width: 1025px){
+ 	.content{
+		width: 1024px;
+		margin: 0 auto;
+	}
+ 	.pages{
+		margin: 0 auto;
+		/*padding-top: 8%;*/
+		width: 400px;
+	}
+	.pages figure{
+		margin: 0 auto;
+		width: 52%;
+	}
+	.copy{
+		margin: 1% auto 0 auto;
+		text-align: right;
+		width:1024px;
+	}
+	figure.tablet{
+		margin: -20px 0 0 10%;
+		width: 50%;
+	}
+	figure.tablet img{
+		width: 100%;
+	}
+	.texto{
+		margin-left:5%;
+		width: 25%;
+	}
+	.texto img{
+		width: 100%;
+	}
+	.pages h1{
+		margin: 20px auto;
+		width:50%;
+	}
+	.pages h1 img{
+		width:100%;
+	}
+ }

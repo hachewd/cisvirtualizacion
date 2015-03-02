@@ -1,0 +1,173 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#main {
+	width: 80%;
+	margin: 100px auto 10px auto;
+	background: #FFF;
+	
+	min-height: 400px;
+	overflow:auto;
+	
+	font-family: arial, helvetica, sans-serif;
+}
+#content {
+	width: 98%;
+	padding:10px;
+	font-size:12px;
+}
+.contenido{
+	width: 980px;
+	margin: 0 auto;
+}
+table {
+	border-radius:5px;
+}
+.fondo_header {
+	background:#CCC;
+	font-weight:bold;
+	border-bottom:1px solid #333;
+}
+h1 {
+	position: fixed;
+	display: block;
+	left: 0;
+	top: 0;
+	margin: 0;
+}
+header {
+	margin-bottom:40px;
+	background:#333;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	padding-top:10px;
+	width: 100%;
+}
+.paginador {
+	margin: 25px 0;
+}
+.paginador a:first-child {
+	border-left:none;
+	color:#999;
+	text-align: 
+}
+.paginador a {
+	display:inline-block;
+	padding:3px 3px 3px 3px;
+	line-height:13px;
+	color:#999;
+	text-decoration:none;
+	text-align:center;
+	font-weight:bold;
+	font-size:13px;
+}
+.paginador a:before{
+	content: "-";
+}
+.paginador a:hover {
+	color:#000;
+}
+span.resultados {
+	display:block;	
+	font-size:13px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+span.cantidad_registros {
+	display:block;
+	float:right;
+}
+.busqueda{
+	display: inline-block;
+	color: #fff;
+	margin-right: 15px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	text-align: right;
+}
+.busqueda a{
+	color: #d56a20;
+	display: block;
+	margin-top: 5px;
+}
+.form_buscar label{
+	margin-top:10px;
+	color: #fff;
+	
+}
+.login{
+	font-family: Arial, helvetica, "sans serif";
+	margin: 25px auto;
+	width: 458px;
+}
+.login .logopromo{
+	width: 50%;
+	margin: 0 auto;
+}
+.login .logopromo img{
+	width: 100%;
+}
+.formLogin{
+	background: #fff;
+	border: 2px #f9ce1d solid;
+	border-radius: 10px;
+	box-shadow:  1px 1px 5px rgba(0,0,0,0.5);
+	padding: 20px;
+	text-align: center;
+}
+.formLogin input[type="text"]{
+	margin: 10px 0;
+}
+.formLogin a{
+	display: block;
+	padding: 10px;
+}
+.form_buscar input, .form_buscar select{
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.form_buscar input[type="submit"]{
+	background: #d56a20;
+	border:0;
+	color: #fff;
+	cursor: pointer;
+}
+table{
+	font-size: 12px;
+	font-family: arial,helvetica,sans-serif;
+}
+table tr:nth-child(even) {background: transparent;}
+table tr:nth-child(odd) {background: #ccc}
+nav{
+	height: 50px;
+	position: fixed;
+	top: 0;
+	padding-top:10px;
+	width: 60%;
+	display: inline-block;
+}
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li{
+	display: inline-block;
+}
+nav li a{
+	display: block;
+	color: #999;
+	font-family: arial, helvetica, sans-serif;
+	font-size:  13px;
+	text-transform: uppercase;
+	text-decoration:  none;
+	padding: 10px 20px;
+}
+nav li a:hover{
+	background: #d56a20;
+	border-radius:  10px;
+	color: #fff;
+}

@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Que espera para probarlo! - CIS Cloud Virtualización</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="icon" href="images/ico_cis.png" type="image/png" sizes="25x25"> 
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/all-style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/jNotify.jquery.css" type="text/css" />
+	<style>
+			.no-cssanimations .rw-wrapper .rw-sentence span:first-child{
+				opacity: 1;
+			}
+		</style>
+		
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="js/hachewd_func.js"></script>
+
+<script type="text/javascript" src="js/jNotify.jquery.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+  $('#configurar').click(function(){
+    var url="php/send_email2.php";
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: $('#contact').serialize(),
+      dataType: "json",
+      success: function(data){
+        //$('#respuesta').html(data);
+        var html = "";
+        html += "<h4>Por favor verifique los siguientes campos</h4>";
+        for (var p in data) {
+          html += ""+data[p]+"<br/>";
+        }
+        if(data.resultado != 1){
+          jError(
+          html,
+          {
+            autoHide : true, // added in v2.0
+            clickOverlay : false, // added in v2.0
+            MinWidth : 250,
+            TimeShown : 2000,
+            ShowTimeEffect : 200,
+            HideTimeEffect : 200,
+            LongTrip :20,
+            HorizontalPosition : 'center',
+            VerticalPosition : 'center',
+            ShowOverlay : true,
+            ColorOverlay : '#000',
+            OpacityOverlay : 0.3,
+            onClosed : function(){ // added in v2.0
+             
+            }
+          });
+        }
+        else{
+           jNotify(
+          'Mensaje enviado existosamente, gracias por preferirnos.',
+          {
+            autoHide : true, // added in v2.0
+            clickOverlay : false, // added in v2.0
+            MinWidth : 250,
+            TimeShown : 2000,
+            ShowTimeEffect : 200,
+            HideTimeEffect : 200,
+            LongTrip :20,
+            HorizontalPosition : 'center',
+            VerticalPosition : 'center',
+            ShowOverlay : true,
+            ColorOverlay : '#000',
+            OpacityOverlay : 0.3,
+            onClosed : function(){ // added in v2.0
+             	window.location.href = "gracias.html";
+            },
+            onCompleted : function(){ // added in v2.0
+             
+            }
+          });
+        }
+      }
+    });
+    return false;
+  });
+});
+</script>
+
+</head>
+<body>
+	<header class="top">
+		<div class="content">
+			<figure><a href=""><img src="images/logo_cishosting.png" border="0"/></a></figure>
+			<aside>LLámenos: <strong>(506) 2521-6222</strong></aside>
+		</div>
+	</header>
+	<div class="content">
+		<figure class="tablet">
+			<img src="images/tablet.png" alt="">
+		</figure>
+		<section class="texto">
+			<img src="images/garantice.png" alt="">
+		</section>
+	</div>
+	<div class="pages">
+		<h1><img src="images/configurar.png" alt="logo"></h1>
+
+		<section class="configserver">
+		 <form id="contact" method="POST">
+
+			<p> Cuánto espacio requiere? </p>
+			<select name="espacio" id="espacio">
+				<option value="selec" selected disabled>Seleccionar</option>
+				<option value="100 megas">100 megas</option>
+				<option value="250 megas">250 megas</option>
+				<option value="250 megas">250 megas</option>
+				<option value="10 Gigas">10 Gigas</option>
+				<option value="20 Gigas">20 Gigas</option>
+				<option value="50 Gigas">50 Gigas</option>
+				<option value="100 Gigas">100 Gigas</option>
+				<option value="Otro - No se">Otro/No sé</option>
+			</select>
+			<p> Cuánta memoria requiere? </p>
+			<select name="memoria" id="memoria">
+				<option value="selec" selected disabled>Seleccionar</option>
+				<option value="1 Giga">1 Giga</option>
+				<option value="2 Gigas">2 Gigas</option>
+				<option value="4 Gigas">4 Gigas</option>
+				<option value="6 Gigas">6 Gigas</option>
+				<option value="10 Gigas">10 Gigas</option>
+				<option value="20 Gigas">20 Gigas</option>
+				<option value="Otro - No se">Otro/No sé</option>
+			</select>
+			<p> Cuánto ancho de banda requiere? </p>
+			<select name="anchobanda" id="anchobanda">
+				<option value="selec" selected disabled>Seleccionar</option>
+				<option value="5 Mbps">5 Mbps</option>
+				<option value="10 Mbps">10 Mbps</option>
+				<option value="15 Mbps">15 Mbps</option>
+				<option value="20 Mbps">20 Mbps</option>
+				<option value="Otro - No se">Otro/No sé</option>
+			</select>
+			<p> Cuánto procesamiento necesita? </p>
+			<select name="procesamiento" id="procesamiento">
+				<option value="selec" selected disabled>Seleccionar</option>
+				<option value="1 Procesador">1 Procesador</option>
+				<option value="2 Procesador">2 Procesador</option>
+				<option value="4 Procesador">4 Procesador</option>
+				<option value="6 Procesador">6 Procesador</option>
+				<option value="8 Procesador">8 Procesador</option>
+				<option value="Otro - No se">Otro/No sé</option>
+			</select>
+			<p> Cuál sistema operativo necesita?</p>
+
+			<select name="sistemaoperativo" id="sistemaoperativo">
+				<option value="selec" selected disabled>Seleccionar</option>
+				<option value="Windows">Windows</option>
+				<option value="Linux">Linux</option>
+				<option value="Otro - No se">Otro/No sé</option>
+			</select>
+			<p> Dirección de correo</p>
+
+			<input type="text" id="email" name="email"/>
+			<br><br>
+			<button id="configurar" name="configurar">Cotizar</button>
+		</form>
+	</section>
+
+	</div>
+	<footer>
+		<div class="content">
+			<figure class="social">Siguenos:<br/><a href=""><img src="images/facebook.jpg"></a><img src="images/twitter.jpg"></a></figure>
+			<figure class="logos"><img src="images/logos_grupo.png"/></figure>
+		</div>
+	</footer>
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-58523951-2', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+
+</body>
+</html>
